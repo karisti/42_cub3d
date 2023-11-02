@@ -6,7 +6,7 @@
 #    By: karisti- <karisti-@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/13 11:52:25 by karisti-          #+#    #+#              #
-#    Updated: 2023/11/02 19:23:46 by karisti-         ###   ########.fr        #
+#    Updated: 2023/11/02 19:42:25 by karisti-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,7 +32,8 @@ CFILE	=	main.c				\
 			
 
 SRCSFD	=	srcs/
-OBJSFD	=	objs/
+BIN		=	bin/
+OBJSFD	=	$(BIN)objs/
 HDR_INC	=	-I./includes/cub3d.h
 
 SRCS	=	$(addprefix $(SRCSFD), $(CFILE))
@@ -40,7 +41,7 @@ OBJS	=	$(addprefix $(OBJSFD), $(CFILE:.c=.o))
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
 # Libraries
-LIBFT	=	libft/libft.a
+LIBFT	=	libft/bin/libft.a
 MLX		=	-lmlx -framework OpenGL -framework AppKit
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
@@ -67,10 +68,10 @@ projectb:
 	@echo "Checking project bonus ..."
 
 $(LIBFT):
-	@make -C libft bonus
+	@make -C libft extras
 
 $(OBJSFD):
-	@mkdir $@
+	@mkdir -p $@
 	@echo "\t[ $(GREEN)✔$(NONE) ] $@ directory"
 
 $(OBJSFD)%.o: $(SRCSFD)%.c
@@ -78,8 +79,8 @@ $(OBJSFD)%.o: $(SRCSFD)%.c
 	@echo "\t[ $(GREEN)✔$(NONE) ] $@ object"
 
 $(NAME): $(OBJSFD) $(OBJS)
-	@$(COMP) $(CFLAGS) $(OBJS) $(MLX) $(LIBFT) -o $@
-	@echo "\t[ $(GREEN)✔$(NONE) ] $@ executable"
+	@$(COMP) $(CFLAGS) $(OBJS) $(MLX) $(LIBFT) -o $(BIN)$@
+	@echo "\t[ $(GREEN)✔$(NONE) ] $(BIN)$@ executable"
 
 bonus: check_libft projectb $(NAME)
 	@echo "... project bonus ready"
@@ -91,7 +92,7 @@ clean:
 	@make -C ./libft clean
 
 fclean: clean
-	@/bin/rm -f $(NAME)
+	@/bin/rm -rf $(BIN)
 	@echo "\t[ $(RED)✗$(NONE) ] $(NAME) executable"
 	@make -C ./libft fclean
 
