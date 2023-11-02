@@ -1,0 +1,16 @@
+NO ./textures/tex_no.xpm
+SO ./textures/tex_so.xpm
+WE ./textures/tex_we.xpm
+EA ./textures/tex_ea.xpm
+
+
+F 220,100,0
+C 0,200,255
+
+
+111111111
+100000001
+111000101
+100000111
+1000N0111
+111111111
