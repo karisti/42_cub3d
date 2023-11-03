@@ -3,7 +3,7 @@
 ## Description
 This project consists of creating a graphic engine (ray casting) using a minimal graphic library, like it is mlx. We are asked to parse the map information from a .cub file and use it to draw a 3d maze on the screen using raycasting principles. This project is inspired by the game Wolfenstein 3D.
 
-https://github.com/karisti/42_cub3d/assets/33479154/0649fe40-050c-450e-a249-b6e082ba63b5
+https://github.com/karisti/42_cub3d/assets/33479154/9a576bd0-b43f-4a8b-ae6e-12e1132866b9
 
 ## Prerequisites
 - MacOS
