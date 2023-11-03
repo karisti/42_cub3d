@@ -3,7 +3,7 @@
 
 
 ## Description
-This project consists of creating a graphic engine (ray casting) using a minimal graphic library, like it is mlx. We are asked to parse the map information from a .cub file and use it to draw a 3d maze on the screen using raycasting principles.
+This project consists of creating a graphic engine (ray casting) using a minimal graphic library, like it is mlx. We are asked to parse the map information from a .cub file and use it to draw a 3d maze on the screen using raycasting principles. This project is inspired by the game Wolfenstein 3D.
 
 ## Prerequisites
 - MacOS
