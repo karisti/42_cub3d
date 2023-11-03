@@ -25,7 +25,7 @@ https://github.com/karisti/42_cub3d/assets/33479154/0649fe40-050c-450e-a249-b6e0
 | `←` | turn camera to left |
 
 ## Lessons
-- Raycasting
+- Ray casting
 - Mlx library
 - Key hooks
 - Parsing
